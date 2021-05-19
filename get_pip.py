@@ -36,3 +36,9 @@ if PY3:
 else:
     def iterbytes(buf):
         return (ord(byte) for byte in buf)
+
+try:
+    from base64 import b85decode
+except ImportError:
+    _b85alphabet = (b"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    b"abcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~")
