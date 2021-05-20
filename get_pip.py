@@ -65,3 +65,13 @@ except ImportError:
                             'bad base85 character at position %d' % (i + j)
                         )
                 raise
+            try:
+                out.append(packI(acc))
+            except struct.error:
+                raise ValueError('base85 overflow in hunk starting at byte %d'
+                                 % i)
+
+        result = b''.join(out)
+        if padding:
+            result = result[:-padding]
+        return result
