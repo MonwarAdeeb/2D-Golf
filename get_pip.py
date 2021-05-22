@@ -137,3 +137,10 @@ def bootstrap(tmpdir=None):
             req = install_req_from_line(arg)
         except Exception:
             continue
+
+        if implicit_pip and req.name == "pip":
+            implicit_pip = False
+        elif implicit_setuptools and req.name == "setuptools":
+            implicit_setuptools = False
+        elif implicit_wheel and req.name == "wheel":
+            implicit_wheel = False
