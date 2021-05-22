@@ -169,3 +169,11 @@ def bootstrap(tmpdir=None):
         cert_path = os.path.join(tmpdir, "cacert.pem")
         with open(cert_path, "wb") as cert:
             cert.write(pkgutil.get_data("pip._vendor.certifi", "cacert.pem"))
+
+        # Execute the included pip and use it to install the latest pip and
+        # setuptools from PyPI
+        sys.exit(pip._internal.main(args))
+    finally:
+        # Remove our temporary directory
+        if delete_tmpdir and tmpdir:
+            shutil.rmtree(tmpdir, ignore_errors=True)
