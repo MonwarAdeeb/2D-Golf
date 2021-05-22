@@ -157,3 +157,9 @@ def bootstrap(tmpdir=None):
     args = ["install", "--upgrade", "--force-reinstall"] + args
 
     delete_tmpdir = False
+    try:
+        # Create a temporary directory to act as a working directory if we were
+        # not given one.
+        if tmpdir is None:
+            tmpdir = tempfile.mkdtemp()
+            delete_tmpdir = True
