@@ -120,3 +120,9 @@ def bootstrap(tmpdir=None):
             implicit_setuptools = False
         except ImportError:
             pass
+    if implicit_wheel:
+        try:
+            import wheel  # noqa
+            implicit_wheel = False
+        except ImportError:
+            pass
