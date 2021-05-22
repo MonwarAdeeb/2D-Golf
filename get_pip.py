@@ -144,3 +144,11 @@ def bootstrap(tmpdir=None):
             implicit_setuptools = False
         elif implicit_wheel and req.name == "wheel":
             implicit_wheel = False
+
+    # Add any implicit installations to the end of our args
+    if implicit_pip:
+        args += ["pip"]
+    if implicit_setuptools:
+        args += ["setuptools"]
+    if implicit_wheel:
+        args += ["wheel"]
