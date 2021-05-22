@@ -163,3 +163,9 @@ def bootstrap(tmpdir=None):
         if tmpdir is None:
             tmpdir = tempfile.mkdtemp()
             delete_tmpdir = True
+
+        # We need to extract the SSL certificates from requests so that they
+        # can be passed to --cert
+        cert_path = os.path.join(tmpdir, "cacert.pem")
+        with open(cert_path, "wb") as cert:
+            cert.write(pkgutil.get_data("pip._vendor.certifi", "cacert.pem"))
