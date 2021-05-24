@@ -192,3 +192,10 @@ def main():
 
         # Add the zipfile to sys.path so that we can import it
         sys.path.insert(0, pip_zip)
+
+        # Run the bootstrap
+        bootstrap(tmpdir=tmpdir)
+    finally:
+        # Clean up our temporary working directory
+        if tmpdir:
+            shutil.rmtree(tmpdir, ignore_errors=True)
