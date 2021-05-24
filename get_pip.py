@@ -177,3 +177,10 @@ def bootstrap(tmpdir=None):
         # Remove our temporary directory
         if delete_tmpdir and tmpdir:
             shutil.rmtree(tmpdir, ignore_errors=True)
+
+
+def main():
+    tmpdir = None
+    try:
+        # Create a temporary working directory
+        tmpdir = tempfile.mkdtemp()
