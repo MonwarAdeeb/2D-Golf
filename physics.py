@@ -23,3 +23,12 @@ def findPower(power, angle, time):
     vf = math.sqrt((vfy**2) + (velx**2))
 
     return vf
+
+
+def findAngle(power, angle):
+    vely = math.sin(angle) * power
+    velx = math.cos(angle) * power
+
+    ang = math.atan(abs(vely) / abs(velx))
+
+    return ang
