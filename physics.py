@@ -32,3 +32,10 @@ def findAngle(power, angle):
     ang = math.atan(abs(vely) / abs(velx))
 
     return ang
+
+
+def maxTime(power, angle):
+    vely = math.sin(angle) * power
+    time = ((power * -1) - (math.sqrt(power**2))) / -9.8
+
+    return time / 2
