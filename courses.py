@@ -20,6 +20,8 @@ try:
     import pygame
 except:
     print("[EXCEPTION] Pygame not installed")
+
+    try:
         print("[GAME] Trying to install pygame via pip")
         import pip
         install("pygame")
@@ -29,3 +31,12 @@ except:
         print("[GAME] Trying to install pip")
         get_pip.main()
         print("[GAME] Pip has been installed")
+        try:
+            print("[GAME] Trying to install pygame")
+            import pip
+            install("pygame")
+            print("[GAME] Pygame has been installed")
+        except:
+            print("[ERROR 1] Pygame could not be installed")
+
+    import pygame
