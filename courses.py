@@ -40,3 +40,13 @@ except:
             print("[ERROR 1] Pygame could not be installed")
 
     import pygame
+
+
+# INITIALIZATION
+pygame.init()
+
+SOUND = False
+
+winwidth = 1080
+winheight = 600
+pygame.display.set_caption('Super Minigolf')
