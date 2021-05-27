@@ -13,3 +13,10 @@ import os
 
 def install(package):
     subprocess.call([sys.executable, "-m", "pip", "install", package])
+
+
+try:
+    print("[GAME] Trying to import pygame")
+    import pygame
+except:
+    print("[EXCEPTION] Pygame not installed")
