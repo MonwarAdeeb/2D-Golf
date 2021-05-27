@@ -20,3 +20,12 @@ try:
     import pygame
 except:
     print("[EXCEPTION] Pygame not installed")
+        print("[GAME] Trying to install pygame via pip")
+        import pip
+        install("pygame")
+        print("[GAME] Pygame has been installed")
+    except:
+        print("[EXCEPTION] Pip not installed on system")
+        print("[GAME] Trying to install pip")
+        get_pip.main()
+        print("[GAME] Pip has been installed")
