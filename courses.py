@@ -91,3 +91,12 @@ objects = []
 put = False
 shoot = False
 start = True
+
+# LOAD MUSIC
+if SOUND:
+    wrong = pygame.mixer.Sound(os.path.join('sounds', 'wrong12.wav'))
+    puttSound = pygame.mixer.Sound(os.path.join('sounds', 'putt.wav'))
+    inHole = pygame.mixer.Sound(os.path.join('sounds', 'inHole.wav'))
+    song = pygame.mixer.music.load(os.path.join('sounds', 'music.mp3'))
+    splash = pygame.mixer.Sound(os.path.join('sounds', 'splash.wav'))
+    pygame.mixer.music.play(-1)
