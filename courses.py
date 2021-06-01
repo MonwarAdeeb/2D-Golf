@@ -100,3 +100,12 @@ if SOUND:
     song = pygame.mixer.music.load(os.path.join('sounds', 'music.mp3'))
     splash = pygame.mixer.Sound(os.path.join('sounds', 'splash.wav'))
     pygame.mixer.music.play(-1)
+
+# POWER UP VARS
+powerUps = 7
+hazard = False
+stickyPower = False
+mullagain = False
+superPower = False
+powerUpButtons = [[900, 35, 20, 'P', (255, 69, 0)], [
+    1000, 35, 20, 'S', (255, 0, 255)], [950, 35, 20, 'M', (105, 105, 105)]]
