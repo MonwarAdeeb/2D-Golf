@@ -115,3 +115,20 @@ myFont = pygame.font.SysFont('comicsansms', 50)
 parFont = pygame.font.SysFont('comicsansms', 30)
 
 win = pygame.display.set_mode((winwidth, winheight))
+
+
+class scoreSheet():
+    def __init__(self, parr):
+        self.parList = parr
+        self.par = sum(self.parList)
+        self.holes = 9
+        self.finalScore = None
+        self.parScore = 0
+        self.strokes = []
+        self.win = win
+        self.winwidth = winwidth
+        self.winheight = winheight
+        self.width = 400
+        self.height = 510
+        self.font = pygame.font.SysFont('comicsansms', 22)
+        self.bigFont = pygame.font.SysFont('comicsansms', 30)
