@@ -154,3 +154,11 @@ class scoreSheet():
                             300 - (text.get_height()/2)))
         text = self.bigFont.render('Score: ', 1, grey)
         self.win.blit(text, (800, 275))
+
+        scorePar = sum(self.strokes) - sum(self.parList[:len(self.strokes)])
+        if scorePar < 0:
+            color = (0, 166, 0)
+        elif scorePar > 0:
+            color = (255, 0, 0)
+        else:
+            color = grey
