@@ -151,7 +151,7 @@ class scoreSheet():
         self.win.blit(text, (800, 330))
         text = self.bigFont.render('Par: ' + str(self.par), 1, grey)
         self.win.blit(text, (240 - (text.get_width()/2),
-                            300 - (text.get_height()/2)))
+                             300 - (text.get_height()/2)))
         text = self.bigFont.render('Score: ', 1, grey)
         self.win.blit(text, (800, 275))
 
@@ -162,3 +162,6 @@ class scoreSheet():
             color = (255, 0, 0)
         else:
             color = grey
+
+        textt = self.bigFont.render(str(scorePar), 1, color)
+        win.blit(textt, (805 + text.get_width(), 275))
