@@ -141,5 +141,5 @@ class scoreSheet():
 
     def getStrokes(self):
         return sum(self.strokes)
-        self.strokes.append(score)
-        grey = (220, 220, 220)
+
+        
