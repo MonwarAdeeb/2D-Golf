@@ -165,3 +165,8 @@ class scoreSheet():
 
         textt = self.bigFont.render(str(scorePar), 1, color)
         win.blit(textt, (805 + text.get_width(), 275))
+
+        startx = self.winwidth/2 - self.width / 2
+        starty = self.winheight/2 - self.height/2
+        pygame.draw.rect(
+            self.win, grey, (startx, starty, self.width, self.height))
