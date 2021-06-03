@@ -170,3 +170,9 @@ class scoreSheet():
         starty = self.winheight/2 - self.height/2
         pygame.draw.rect(
             self.win, grey, (startx, starty, self.width, self.height))
+
+        # Set up grid
+        for i in range(1, 4):
+            # Column Lines
+            pygame.draw.line(self.win, (0, 0, 0), (startx + (i * (self.width/3)),
+                                                   starty), (startx + (i * (self.width/3)), starty + self.height), 2)
