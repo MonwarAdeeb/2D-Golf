@@ -192,3 +192,8 @@ class scoreSheet():
                 blit = self.font.render(str(i - 1), 1, (128, 128, 128))
                 self.win.blit(blit, (startx + 56, starty + 10 +
                                      ((i - 1) * (self.height/10))))
+
+                blit = self.font.render(
+                    str(self.parList[i - 2]), 1, (128, 128, 128))
+                self.win.blit(blit, (startx + 60 + 133, starty +
+                                     10 + ((i - 1) * (self.height/10))))
