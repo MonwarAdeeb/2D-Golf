@@ -188,3 +188,7 @@ class scoreSheet():
                 blit = self.font.render(
                     'Press the mouse to continue...', 1, (128, 128, 128))
                 self.win.blit(blit, (384, 565))
+            else:  # Populate rows accordingly
+                blit = self.font.render(str(i - 1), 1, (128, 128, 128))
+                self.win.blit(blit, (startx + 56, starty + 10 +
+                                     ((i - 1) * (self.height/10))))
