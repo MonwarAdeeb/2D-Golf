@@ -204,3 +204,7 @@ class scoreSheet():
                         color = (255, 0, 0)
                     else:
                         color = (0, 0, 0)
+
+                     blit = self.font.render(str(self.strokes[i - 2]), 1, color)
+                    self.win.blit(
+                        blit, ((startx + 60 + 266, starty + 10 + ((i - 1) * (self.height/10)))))
