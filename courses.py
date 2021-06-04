@@ -197,3 +197,10 @@ class scoreSheet():
                     str(self.parList[i - 2]), 1, (128, 128, 128))
                 self.win.blit(blit, (startx + 60 + 133, starty +
                                      10 + ((i - 1) * (self.height/10))))
+                try:  # Catch the index out of range error, display the stokes each level
+                    if self.strokes[i - 2] < self.parList[i - 2]:
+                        color = (0, 166, 0)
+                    elif self.strokes[i - 2] > self.parList[i - 2]:
+                        color = (255, 0, 0)
+                    else:
+                        color = (0, 0, 0)
