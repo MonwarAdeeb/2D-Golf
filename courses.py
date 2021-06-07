@@ -24,3 +24,16 @@ course1 = [lvl1, lvl2, lvl3, lvl4, lvl5, lvl6, lvl7, lvl8, lvl9]
 
 def getLvl(n=1):
     return course1[n - 1][:-1]
+
+
+def getPar(course=1):
+    if course == 1:
+        count = []
+        for x in range(9):
+            if x < len(course1):
+                l = course1[x][-1]
+                par = l[0]
+                count.append(par)
+            else:
+                count.append(0)
+    return count
