@@ -44,3 +44,10 @@ def getStart(lvl, course=1):
         pos = course1[lvl - 1][-1]
         nPos = pos[-1]
     return nPos
+
+
+def coinHit(lvl):
+    for x in course1[lvl]:
+        if len(x) > 4:
+            if x[4] == 'coin':
+                x[5] = False
