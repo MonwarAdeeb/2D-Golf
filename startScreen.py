@@ -19,3 +19,13 @@ buttons = [[1080/2 - course1.get_width()/2, 260, course1.get_width(),
 shopButton = []
 ballObjects = []
 surfaces = []
+
+
+class ball():
+    def __init__(self, color, locked, org):
+        self.color = color
+        self.locked = locked
+        self.original = org
+        self.price = 10
+        self.equipped = False
+        self.font = pygame.font.SysFont('comicsansms', 22)
