@@ -37,3 +37,10 @@ def getPar(course=1):
             else:
                 count.append(0)
     return count
+
+
+def getStart(lvl, course=1):
+    if course == 1:
+        pos = course1[lvl - 1][-1]
+        nPos = pos[-1]
+    return nPos
