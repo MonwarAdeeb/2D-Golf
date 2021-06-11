@@ -43,3 +43,12 @@ class ball():
                 file.write(line)
 
         self.locked = False
+
+    def getLocked(self):
+        return self.locked
+
+    def equip(self):
+        self.equipped = True
+
+    def getEquip(self):
+        return self.equipped
