@@ -29,3 +29,17 @@ class ball():
         self.price = 10
         self.equipped = False
         self.font = pygame.font.SysFont('comicsansms', 22)
+
+    def unlock(self):
+        file = open('scores.txt', 'r')
+        f = file.readlines()
+        file.close()
+
+        file = open('scores.txt', 'w')
+        for line in f:
+            if line.find(self.original) != -1:
+                file.write(self.original + '-' + 'True\n')
+            else:
+                file.write(line)
+
+        self.locked = False
