@@ -52,3 +52,8 @@ class ball():
 
     def getEquip(self):
         return self.equipped
+
+    def getSurf(self, hover=False):
+        surf = pygame.Surface((160, 125), pygame.SRCALPHA, 32)
+        surf = surf.convert_alpha()
+        # surf.fill((255,255,255))
