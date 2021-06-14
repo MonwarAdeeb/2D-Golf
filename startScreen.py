@@ -57,3 +57,7 @@ class ball():
         surf = pygame.Surface((160, 125), pygame.SRCALPHA, 32)
         surf = surf.convert_alpha()
         # surf.fill((255,255,255))
+        pygame.draw.circle(
+            surf, (0, 0, 0), (round(surf.get_width()/2), 25), 22)
+        pygame.draw.circle(
+            surf, self.color, (round(surf.get_width()/2), 25), 20)
