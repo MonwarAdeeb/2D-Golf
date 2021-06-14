@@ -76,3 +76,9 @@ class ball():
                 buy = self.font.render('Equip', 1, (0, 0, 0))
                 surf.blit(
                     buy, (round(surf.get_width() / 2 - buy.get_width() / 2), 80))
+            else:
+                buy = self.font.render('Equipped', 1, (0, 0, 0))
+                surf.blit(
+                    buy, (round(surf.get_width() / 2 - buy.get_width() / 2), 80))
+            surf.blit(
+                label, (round(surf.get_width()/2 - label.get_width()/2), 50))
