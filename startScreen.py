@@ -65,3 +65,5 @@ class ball():
             label = self.font.render('Price: 10', 1, (0, 0, 0))
             if hover:
                 buy = self.font.render('Purchase?', 1, (64, 64, 64))
+            else:
+                buy = self.font.render('Purchase?', 1, (0, 0, 0))
