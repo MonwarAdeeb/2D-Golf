@@ -63,3 +63,5 @@ class ball():
             surf, self.color, (round(surf.get_width()/2), 25), 20)
         if self.locked == True:
             label = self.font.render('Price: 10', 1, (0, 0, 0))
+            if hover:
+                buy = self.font.render('Purchase?', 1, (64, 64, 64))
