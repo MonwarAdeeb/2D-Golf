@@ -82,3 +82,7 @@ class ball():
                     buy, (round(surf.get_width() / 2 - buy.get_width() / 2), 80))
             surf.blit(
                 label, (round(surf.get_width()/2 - label.get_width()/2), 50))
+
+        pygame.display.update()
+
+        return surf
