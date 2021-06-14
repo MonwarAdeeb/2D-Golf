@@ -67,3 +67,6 @@ class ball():
                 buy = self.font.render('Purchase?', 1, (64, 64, 64))
             else:
                 buy = self.font.render('Purchase?', 1, (0, 0, 0))
+            surf.blit(
+                label, (round(surf.get_width()/2 - label.get_width()/2), 50))
+            surf.blit(buy, (round(surf.get_width()/2 - label.get_width()/2), 80))
