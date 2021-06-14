@@ -61,3 +61,5 @@ class ball():
             surf, (0, 0, 0), (round(surf.get_width()/2), 25), 22)
         pygame.draw.circle(
             surf, self.color, (round(surf.get_width()/2), 25), 20)
+        if self.locked == True:
+            label = self.font.render('Price: 10', 1, (0, 0, 0))
