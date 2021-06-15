@@ -86,3 +86,14 @@ class ball():
         pygame.display.update()
 
         return surf
+
+
+def getBest():
+    file = open('scores.txt', 'r')
+    for line in file:
+        l = line.split()
+        if l[0] == 'score':
+            file.close()
+            return l[1].strip()
+    return 0
+    file.close()
