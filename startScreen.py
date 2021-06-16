@@ -97,3 +97,12 @@ def getBest():
             return l[1].strip()
     return 0
     file.close()
+
+
+def getCoins():
+    file = open('scores.txt', 'r')
+    for line in file:
+        l = line.split()
+        if l[0] == 'coins':
+            file.close()
+            return l[1].strip()
