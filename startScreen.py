@@ -128,3 +128,13 @@ def drawShop(pos=None, click=False):
                                     oldCoins = int(getCoins())
                                     file = open('scores.txt', 'r')
                                     f = file.readlines()
+
+                                    file = open('scores.txt', 'w')
+                                    for line in f:
+                                        l = line.split()
+                                        if l[0] == 'coins':
+                                            file.write(
+                                                'coins ' + str(oldCoins - 10) + '\n')
+                                        else:
+                                            file.write(line)
+                                    file.close()
