@@ -121,3 +121,10 @@ def drawShop(pos=None, click=False):
                         root = tk.Tk()
                         root.attributes("-topmost", True)
                         root.withdraw()
+                        if ballObjects[c].locked == True:
+                            if messagebox.askyesno('Confirm Purchase?', 'Are you sure you would like to purchase this new ball for 10 coins?'):
+                                if int(getCoins()) >= 10:
+                                    ballObjects[c].unlock()
+                                    oldCoins = int(getCoins())
+                                    file = open('scores.txt', 'r')
+                                    f = file.readlines()
