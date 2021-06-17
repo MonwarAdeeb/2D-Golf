@@ -106,3 +106,8 @@ def getCoins():
         if l[0] == 'coins':
             file.close()
             return l[1].strip()
+
+
+def drawShop(pos=None, click=False):
+    global ballObjects
+    pygame.time.delay(20)
