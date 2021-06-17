@@ -117,3 +117,7 @@ def drawShop(pos=None, click=False):
         for i in surfaces:
             if pos[0] > i[0] and pos[0] < i[0] + i[2]:
                 if pos[1] > i[1] + 80 and pos[1] < i[1] + i[3]:
+                    if click == True:
+                        root = tk.Tk()
+                        root.attributes("-topmost", True)
+                        root.withdraw()
