@@ -152,3 +152,6 @@ def drawShop(pos=None, click=False):
                         else:
                             for balls in ballObjects:
                                 balls.equipped = False
+                            ballObjects[c].equip()
+                            ballObjects[c].equipped = True
+            c = c + 1
