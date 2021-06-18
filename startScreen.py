@@ -149,3 +149,6 @@ def drawShop(pos=None, click=False):
                                     break
                             else:
                                 break
+                        else:
+                            for balls in ballObjects:
+                                balls.equipped = False
