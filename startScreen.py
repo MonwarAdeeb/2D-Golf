@@ -141,3 +141,7 @@ def drawShop(pos=None, click=False):
                                 else:
                                     messagebox.showerror(
                                         'Not enough coins!', 'You do not have enough coins to purchase this item!')
+
+                                try:
+                                    root.destroy()
+                                    break
