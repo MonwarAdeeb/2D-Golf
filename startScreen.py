@@ -138,3 +138,6 @@ def drawShop(pos=None, click=False):
                                         else:
                                             file.write(line)
                                     file.close()
+                                else:
+                                    messagebox.showerror(
+                                        'Not enough coins!', 'You do not have enough coins to purchase this item!')
