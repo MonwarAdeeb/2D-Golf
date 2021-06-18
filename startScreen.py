@@ -147,3 +147,5 @@ def drawShop(pos=None, click=False):
                                     break
                                 except:
                                     break
+                            else:
+                                break
