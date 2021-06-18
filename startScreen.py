@@ -145,3 +145,5 @@ def drawShop(pos=None, click=False):
                                 try:
                                     root.destroy()
                                     break
+                                except:
+                                    break
