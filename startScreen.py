@@ -161,3 +161,8 @@ def drawShop(pos=None, click=False):
     backButton = font.render('<-- Back', 1, (135, 206, 250))
     surf.blit(backButton, (10, 560))
     text = font.render('Coins: ' + getCoins(), 1, (51, 51, 153))
+    surf.blit(text, (10, 10))
+    count = 0
+    c = 0
+    xVal = 0
+    file = open('scores.txt', 'r')
