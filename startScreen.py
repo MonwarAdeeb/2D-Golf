@@ -182,3 +182,8 @@ def drawShop(pos=None, click=False):
                     obj = ball(tuple(newList), False, l[0])
                 else:
                     obj = ball(tuple(newList), True, l[0])
+
+                if len(ballObjects) == 0:
+                    obj.equip()
+            else:
+                obj = ballObjects[c]
