@@ -174,3 +174,11 @@ def drawShop(pos=None, click=False):
             color = l[0]
             color = color.split(',')
             newList = []
+
+            for num in color:
+                newList.append(int(num))
+            if len(ballObjects) <= 15:
+                if l[1].strip() == 'True':
+                    obj = ball(tuple(newList), False, l[0])
+                else:
+                    obj = ball(tuple(newList), True, l[0])
