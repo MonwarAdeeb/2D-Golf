@@ -155,3 +155,9 @@ def drawShop(pos=None, click=False):
                             ballObjects[c].equip()
                             ballObjects[c].equipped = True
             c = c + 1
+
+    surf = pygame.Surface((1080, 600))
+    surf.blit(back, (0, 0))
+    backButton = font.render('<-- Back', 1, (135, 206, 250))
+    surf.blit(backButton, (10, 560))
+    text = font.render('Coins: ' + getCoins(), 1, (51, 51, 153))
