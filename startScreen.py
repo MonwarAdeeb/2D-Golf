@@ -152,6 +152,7 @@ def drawShop(pos=None, click=False):
                         else:
                             for balls in ballObjects:
                                 balls.equipped = False
+
                             ballObjects[c].equip()
                             ballObjects[c].equipped = True
             c = c + 1
@@ -166,3 +167,10 @@ def drawShop(pos=None, click=False):
     c = 0
     xVal = 0
     file = open('scores.txt', 'r')
+    for line in file:
+        if line.find('True') != -1 or line.find('False') != -1:
+            count += 1
+            l = line.split('-')
+            color = l[0]
+            color = color.split(',')
+            newList = []
