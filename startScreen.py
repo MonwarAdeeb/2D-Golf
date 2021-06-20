@@ -197,3 +197,6 @@ def drawShop(pos=None, click=False):
                 count = 0
             c = c + 1
     file.close()
+
+    pygame.display.update()
+    return surf
