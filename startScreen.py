@@ -187,3 +187,13 @@ def drawShop(pos=None, click=False):
                     obj.equip()
             else:
                 obj = ballObjects[c]
+
+            s = obj.getSurf()
+            surf.blit(s, ((200 * count) - 150, 50 + (xVal * 160)))
+            surfaces.append([(200 * count) - 150, 50 + (xVal * 160), 160, 125])
+            ballObjects.append(obj)
+            if count % 5 == 0:
+                xVal = xVal + 1
+                count = 0
+            c = c + 1
+    file.close()
