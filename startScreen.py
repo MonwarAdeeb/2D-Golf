@@ -200,3 +200,11 @@ def drawShop(pos=None, click=False):
 
     pygame.display.update()
     return surf
+
+
+def getBallColor():
+    global ballObjects
+    for balls in ballObjects:
+        if balls.equipped == True:
+            return balls.color
+    return None
