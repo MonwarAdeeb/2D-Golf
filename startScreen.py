@@ -222,3 +222,7 @@ def mainScreen(hover=False):
         text = font.render('Ball Shop', 1, (0, 0, 0))
     else:
         text = font.render('Ball Shop', 1, (51, 51, 153))
+    surf.blit(text, (960, 12))
+    shopButton = text.get_rect()
+    shopButton[0] = 960
+    shopButton[1] = 12
