@@ -208,3 +208,12 @@ def getBallColor():
         if balls.equipped == True:
             return balls.color
     return None
+
+
+def mainScreen(hover=False):
+    global shopButton
+    surf = pygame.Surface((1080, 600))
+    w = title.get_width()
+    h = title.get_height()
+    surf.blit(back, (0, 0))
+    surf.blit(title, ((1080/2 - (w/2)), 50))
