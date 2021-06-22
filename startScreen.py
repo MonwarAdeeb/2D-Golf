@@ -226,3 +226,12 @@ def mainScreen(hover=False):
     shopButton = text.get_rect()
     shopButton[0] = 960
     shopButton[1] = 12
+    # For course Button
+    i = buttons[0]
+    surf.blit(course1, (i[0], i[1]))
+    text = font.render(i[4], 1, (51, 51, 153))
+    surf.blit(text, (i[0] + ((i[3] - text.get_width())/2), i[1] + i[3] + 10))
+    text = font.render('Best: ' + getBest(), 1, (51, 51, 153))
+    surf.blit(text, (i[0] + ((i[3] - text.get_width())/2), i[1] + i[3] + 40))
+    text = font.render('Coins: ' + getCoins(), 1, (51, 51, 153))
+    surf.blit(text, (10, 10))
