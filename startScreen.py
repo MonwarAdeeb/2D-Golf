@@ -235,3 +235,6 @@ def mainScreen(hover=False):
     surf.blit(text, (i[0] + ((i[3] - text.get_width())/2), i[1] + i[3] + 40))
     text = font.render('Coins: ' + getCoins(), 1, (51, 51, 153))
     surf.blit(text, (10, 10))
+
+    win.blit(surf, (0, 0))
+    pygame.display.update()
