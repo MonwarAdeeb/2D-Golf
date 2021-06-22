@@ -217,3 +217,8 @@ def mainScreen(hover=False):
     h = title.get_height()
     surf.blit(back, (0, 0))
     surf.blit(title, ((1080/2 - (w/2)), 50))
+    # For Shop Button
+    if hover == True:
+        text = font.render('Ball Shop', 1, (0, 0, 0))
+    else:
+        text = font.render('Ball Shop', 1, (51, 51, 153))
