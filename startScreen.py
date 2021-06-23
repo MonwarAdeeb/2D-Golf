@@ -255,3 +255,12 @@ def mouseOver(larger=False):
         buttons[0][3] = 200
         course1 = pygame.transform.scale(course, (200, 200))
     mainScreen()
+
+
+def shopClick(pos):
+    global shopButton
+    i = shopButton
+    if pos[0] > i[0] and pos[0] < i[0] + i[2]:
+        if pos[1] > i[1] and pos[1] < i[1] + i[3]:
+            return True
+    return False
