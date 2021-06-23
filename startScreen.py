@@ -238,3 +238,13 @@ def mainScreen(hover=False):
 
     win.blit(surf, (0, 0))
     pygame.display.update()
+
+
+def mouseOver(larger=False):
+    global course1
+    if larger:
+        buttons[0][0] = 415
+        buttons[0][1] = 220
+        buttons[0][2] = 250
+        buttons[0][3] = 250
+        course1 = pygame.transform.scale(course, (250, 250))
