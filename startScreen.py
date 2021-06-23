@@ -248,3 +248,10 @@ def mouseOver(larger=False):
         buttons[0][2] = 250
         buttons[0][3] = 250
         course1 = pygame.transform.scale(course, (250, 250))
+    else:
+        buttons[0][1] = 240
+        buttons[0][0] = 440
+        buttons[0][2] = 200
+        buttons[0][3] = 200
+        course1 = pygame.transform.scale(course, (200, 200))
+    mainScreen()
