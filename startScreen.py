@@ -264,3 +264,12 @@ def shopClick(pos):
         if pos[1] > i[1] and pos[1] < i[1] + i[3]:
             return True
     return False
+
+
+def click(pos):
+    for i in buttons:
+        if pos[0] > i[0] and pos[0] < i[0] + i[2]:
+            if pos[1] > i[1] and pos[1] < i[1] + i[3]:
+                return i[4]
+                break
+    return None
