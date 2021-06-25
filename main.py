@@ -31,3 +31,8 @@ except:
         print("[GAME] Trying to install pip")
         get_pip.main()
         print("[GAME] Pip has been installed")
+        try:
+            print("[GAME] Trying to install pygame")
+            import pip
+            install("pygame")
+            print("[GAME] Pygame has been installed")
