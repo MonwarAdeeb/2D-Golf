@@ -36,3 +36,7 @@ except:
             import pip
             install("pygame")
             print("[GAME] Pygame has been installed")
+        except:
+            print("[ERROR 1] Pygame could not be installed")
+
+    import pygame
