@@ -70,3 +70,24 @@ powerMeter = pygame.transform.scale(powerMeter, (150, 150))
 
 # SET ICON
 pygame.display.set_icon(icon)
+
+# GLOBAL VARIABLES
+coinTime = 0
+coinIndex = 0
+time = 0
+rollVel = 0
+strokes = 0
+par = 0
+level = 8
+flagx = 0
+coins = 0
+shootPos = ()
+ballColor = (255, 255, 255)
+ballStationary = ()
+line = None
+power = 0
+hole = ()
+objects = []
+put = False
+shoot = False
+start = True
