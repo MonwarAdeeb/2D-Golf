@@ -50,3 +50,20 @@ SOUND = False
 winwidth = 1080
 winheight = 600
 pygame.display.set_caption('Super Minigolf')
+
+# LOAD IMAGES
+icon = pygame.image.load(os.path.join('img', 'icon.ico'))
+icon = pygame.transform.scale(icon, (32, 32))
+background = pygame.image.load(os.path.join('img', 'back.png'))
+sand = pygame.image.load(os.path.join('img', 'sand.png'))
+edge = pygame.image.load(os.path.join('img', 'sandEdge.png'))
+bottom = pygame.image.load(os.path.join('img', 'sandBottom.png'))
+green = pygame.image.load(os.path.join('img', 'green.png'))
+flag = pygame.image.load(os.path.join('img', 'flag.png'))
+water = pygame.image.load(os.path.join('img', 'water.png'))
+laser = pygame.image.load(os.path.join('img', 'laser.png'))
+sticky = pygame.image.load(os.path.join('img', 'sticky.png'))
+coinPics = [pygame.image.load(os.path.join('img', 'coin1.png')), pygame.image.load(os.path.join('img', 'coin2.png')), pygame.image.load(os.path.join('img', 'coin3.png')), pygame.image.load(os.path.join(
+    'img', 'coin4.png')), pygame.image.load(os.path.join('img', 'coin5.png')), pygame.image.load(os.path.join('img', 'coin6.png')), pygame.image.load(os.path.join('img', 'coin7.png')), pygame.image.load(os.path.join('img', 'coin8.png'))]
+powerMeter = pygame.image.load(os.path.join('img', 'power.png'))
+powerMeter = pygame.transform.scale(powerMeter, (150, 150))
