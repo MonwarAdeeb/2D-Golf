@@ -67,3 +67,6 @@ coinPics = [pygame.image.load(os.path.join('img', 'coin1.png')), pygame.image.lo
     'img', 'coin4.png')), pygame.image.load(os.path.join('img', 'coin5.png')), pygame.image.load(os.path.join('img', 'coin6.png')), pygame.image.load(os.path.join('img', 'coin7.png')), pygame.image.load(os.path.join('img', 'coin8.png'))]
 powerMeter = pygame.image.load(os.path.join('img', 'power.png'))
 powerMeter = pygame.transform.scale(powerMeter, (150, 150))
+
+# SET ICON
+pygame.display.set_icon(icon)
