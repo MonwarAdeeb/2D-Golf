@@ -109,3 +109,9 @@ mullagain = False
 superPower = False
 powerUpButtons = [[900, 35, 20, 'P', (255, 69, 0)], [
     1000, 35, 20, 'S', (255, 0, 255)], [950, 35, 20, 'M', (105, 105, 105)]]
+
+# FONTS
+myFont = pygame.font.SysFont('comicsansms', 50)
+parFont = pygame.font.SysFont('comicsansms', 30)
+
+win = pygame.display.set_mode((winwidth, winheight))
