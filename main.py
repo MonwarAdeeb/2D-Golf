@@ -132,3 +132,6 @@ class scoreSheet():
         self.height = 510
         self.font = pygame.font.SysFont('comicsansms', 22)
         self.bigFont = pygame.font.SysFont('comicsansms', 30)
+
+    def getScore(self):
+        return sum(self.strokes) - sum(self.parList[:len(self.strokes)])
