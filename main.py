@@ -138,3 +138,6 @@ class scoreSheet():
 
     def getPar(self):
         return self.par
+
+    def getStrokes(self):
+        return sum(self.strokes)
