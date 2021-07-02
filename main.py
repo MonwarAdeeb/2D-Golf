@@ -135,3 +135,6 @@ class scoreSheet():
 
     def getScore(self):
         return sum(self.strokes) - sum(self.parList[:len(self.strokes)])
+
+    def getPar(self):
+        return self.par
