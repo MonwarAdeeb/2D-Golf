@@ -145,3 +145,12 @@ class scoreSheet():
     def drawSheet(self, score=0):
         self.strokes.append(score)
         grey = (220, 220, 220)
+
+        text = self.bigFont.render(
+            'Strokes: ' + str(sum(self.strokes)), 1, grey)
+        self.win.blit(text, (800, 330))
+        text = self.bigFont.render('Par: ' + str(self.par), 1, grey)
+        self.win.blit(text, (240 - (text.get_width()/2),
+                             300 - (text.get_height()/2)))
+        text = self.bigFont.render('Score: ', 1, grey)
+        self.win.blit(text, (800, 275))
