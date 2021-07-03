@@ -162,3 +162,6 @@ class scoreSheet():
             color = (255, 0, 0)
         else:
             color = grey
+
+        textt = self.bigFont.render(str(scorePar), 1, color)
+        win.blit(textt, (805 + text.get_width(), 275))
