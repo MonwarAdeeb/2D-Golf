@@ -176,3 +176,15 @@ class scoreSheet():
             # Column Lines
             pygame.draw.line(self.win, (0, 0, 0), (startx + (i * (self.width/3)),
                                                    starty), (startx + (i * (self.width/3)), starty + self.height), 2)
+        for i in range(1, 11):
+            # Rows
+            if i == 1:  # Display all headers for rows
+                blit = self.font.render('Hole', 2, (0, 0, 0))
+                self.win.blit(blit, (startx + 40, starty + 10))
+                blit = self.font.render('Par', 2, (0, 0, 0))
+                self.win.blit(blit, (startx + 184, starty + 10))
+                blit = self.font.render('Stroke', 2, (0, 0, 0))
+                self.win.blit(blit, (startx + 295, starty + 10))
+                blit = self.font.render(
+                    'Press the mouse to continue...', 1, (128, 128, 128))
+                self.win.blit(blit, (384, 565))
