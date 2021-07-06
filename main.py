@@ -208,3 +208,7 @@ class scoreSheet():
                     blit = self.font.render(str(self.strokes[i - 2]), 1, color)
                     self.win.blit(
                         blit, ((startx + 60 + 266, starty + 10 + ((i - 1) * (self.height/10)))))
+                except:
+                    blit = self.font.render('-', 1, (128, 128, 128))
+                    self.win.blit(blit, (startx + 62 + 266,
+                                         starty + 10 + ((i - 1) * (self.height/10))))
