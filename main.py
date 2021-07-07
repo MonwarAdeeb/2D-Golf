@@ -216,3 +216,13 @@ class scoreSheet():
             # Draw row lines
             pygame.draw.line(self.win, (0, 0, 0), (startx, starty + (i * (self.height/10))),
                              (startx + self.width, starty + (i * (self.height / 10))), 2)
+
+
+def error():
+    if SOUND:
+        wrong.play()
+    root = tk.Tk()
+    root.attributes("-topmost", True)
+    root.withdraw()
+    messagebox.showerror(
+        'Out of Powerups!', 'You have no more powerups remaining for this course, press ok to continue...')
