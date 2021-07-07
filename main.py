@@ -226,3 +226,7 @@ def error():
     root.withdraw()
     messagebox.showerror(
         'Out of Powerups!', 'You have no more powerups remaining for this course, press ok to continue...')
+    try:
+        root.destroy()
+    except:
+        pass
