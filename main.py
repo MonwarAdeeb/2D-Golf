@@ -242,3 +242,8 @@ def endScreen():  # Display this screen when the user completes trhe course
     text = myFont.render('Course Completed!', 1, (64, 64, 64))
     win.blit(text, (winwidth/2 - text.get_width()/2, 210))
     text = parFont.render('Par: ' + str(sheet.getPar()), 1, (64, 64, 64))
+    win.blit(text, ((winwidth/2 - text.get_width()/2, 320)))
+    text = parFont.render(
+        'Strokes: ' + str(sheet.getStrokes()), 1, (64, 64, 64))
+    win.blit(text, ((winwidth/2 - text.get_width()/2, 280)))
+    blit = parFont.render('Press the mouse to continue...', 1, (64, 64, 64))
