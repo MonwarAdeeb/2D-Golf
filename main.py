@@ -236,3 +236,9 @@ def endScreen():  # Display this screen when the user completes trhe course
     global start, starting, level, sheet, coins
     starting = True
     start = True
+
+    # Draw all text to display on screen
+    win.blit(background, (0, 0))
+    text = myFont.render('Course Completed!', 1, (64, 64, 64))
+    win.blit(text, (winwidth/2 - text.get_width()/2, 210))
+    text = parFont.render('Par: ' + str(sheet.getPar()), 1, (64, 64, 64))
