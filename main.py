@@ -230,3 +230,9 @@ def error():
         root.destroy()
     except:
         pass
+
+
+def endScreen():  # Display this screen when the user completes trhe course
+    global start, starting, level, sheet, coins
+    starting = True
+    start = True
