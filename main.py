@@ -253,3 +253,15 @@ def endScreen():  # Display this screen when the user completes trhe course
     text = parFont.render('Coins Collected: ' + str(coins), 1, (64, 64, 64))
     win.blit(text, ((winwidth/2 - text.get_width()/2, 470)))
     pygame.display.update()
+
+    # RE-WRITE TEXT FILE Contaning Scores
+    oldscore = 0
+    oldcoins = 0
+    file = open('scores.txt', 'r')
+    f = file.readlines()
+    for line in file:
+        l = line.split()
+        if l[0] == 'score':
+            oldscore = str(l[1]).strip()
+        if l[0] == 'coins':
+            oldcoins = str(l[1]).strip()
