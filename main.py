@@ -265,3 +265,5 @@ def endScreen():  # Display this screen when the user completes trhe course
             oldscore = str(l[1]).strip()
         if l[0] == 'coins':
             oldcoins = str(l[1]).strip()
+
+    file = open('scores.txt', 'w')
