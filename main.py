@@ -274,3 +274,6 @@ def endScreen():  # Display this screen when the user completes trhe course
             pygame.display.update()
             file.write('score ' + str(sheet.getScore()) + '\n')
             file.write('coins ' + str(int(oldcoins) + coins) + '\n')
+        else:
+            file.write('score ' + str(oldscore) + '\n')
+            file.write('coins ' + str(int(oldcoins) + coins) + '\n')
