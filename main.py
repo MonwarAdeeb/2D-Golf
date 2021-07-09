@@ -267,3 +267,10 @@ def endScreen():  # Display this screen when the user completes trhe course
             oldcoins = str(l[1]).strip()
 
     file = open('scores.txt', 'w')
+    if str(oldscore).lower() != 'none':
+        if sheet.getScore() < int(oldscore):
+            text = myFont.render('New Best!', 1, (64, 64, 64))
+            win.blit(text, (winwidth/2 - text.get_width()/2, 130))
+            pygame.display.update()
+            file.write('score ' + str(sheet.getScore()) + '\n')
+            file.write('coins ' + str(int(oldcoins) + coins) + '\n')
