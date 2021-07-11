@@ -288,3 +288,13 @@ def endScreen():  # Display this screen when the user completes trhe course
         co += 1
 
     file.close()
+
+    # Wait
+    loop = True
+    while loop:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                loop = False
+                break
