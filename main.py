@@ -280,3 +280,11 @@ def endScreen():  # Display this screen when the user completes trhe course
     else:
         file.write('score ' + str(sheet.getScore()) + '\n')
         file.write('coins ' + str(int(oldcoins) + coins) + '\n')
+
+    co = 0
+    for line in f:
+        if co > 2:
+            file.write(line)
+        co += 1
+
+    file.close()
