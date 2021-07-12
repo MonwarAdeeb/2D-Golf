@@ -305,3 +305,6 @@ def endScreen():  # Display this screen when the user completes trhe course
     sheet = scoreSheet(list)
     starting = True
     hover = False
+    while starting:
+        pygame.time.delay(10)
+        startScreen.mainScreen(hover)
