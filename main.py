@@ -298,3 +298,10 @@ def endScreen():  # Display this screen when the user completes trhe course
             if event.type == pygame.MOUSEBUTTONDOWN:
                 loop = False
                 break
+    level = 1
+    setup(level)
+    list = courses.getPar(1)
+    par = list[level - 1]
+    sheet = scoreSheet(list)
+    starting = True
+    hover = False
