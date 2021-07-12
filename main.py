@@ -308,3 +308,9 @@ def endScreen():  # Display this screen when the user completes trhe course
     while starting:
         pygame.time.delay(10)
         startScreen.mainScreen(hover)
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEMOTION:
+                pos = pygame.mouse.get_pos()
+                hover = startScreen.shopClick(pos)
+                course = startScreen.click(pos)
+                startScreen.mouseOver(course != None)
