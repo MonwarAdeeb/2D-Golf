@@ -327,3 +327,5 @@ def endScreen():  # Display this screen when the user completes trhe course
                     while shop:
                         for event in pygame.event.get():
                             pygame.time.delay(10)
+                            if event.type == pygame.QUIT:
+                                pygame.quit()
