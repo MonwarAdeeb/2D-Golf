@@ -331,3 +331,6 @@ def endScreen():  # Display this screen when the user completes trhe course
                                 pygame.quit()
                             if event.type == pygame.MOUSEBUTTONDOWN:
                                 pos = pygame.mouse.get_pos()
+                                if pos[0] > 10 and pos[0] < 100 and pos[1] > 560:
+                                    shop = False
+                                    break
