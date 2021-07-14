@@ -329,3 +329,5 @@ def endScreen():  # Display this screen when the user completes trhe course
                             pygame.time.delay(10)
                             if event.type == pygame.QUIT:
                                 pygame.quit()
+                            if event.type == pygame.MOUSEBUTTONDOWN:
+                                pos = pygame.mouse.get_pos()
