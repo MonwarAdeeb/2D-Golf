@@ -324,3 +324,6 @@ def endScreen():  # Display this screen when the user completes trhe course
                     win.blit(surface, (0, 0))
                     pygame.display.update()
                     shop = True
+                    while shop:
+                        for event in pygame.event.get():
+                            pygame.time.delay(10)
