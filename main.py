@@ -334,3 +334,6 @@ def endScreen():  # Display this screen when the user completes trhe course
                                 if pos[0] > 10 and pos[0] < 100 and pos[1] > 560:
                                     shop = False
                                     break
+                                surface = startScreen.drawShop(pos, True)
+                                win.blit(surface, (0, 0))
+                                pygame.display.update()
