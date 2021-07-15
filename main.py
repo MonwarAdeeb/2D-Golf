@@ -356,3 +356,5 @@ def setup(level):  # Setup objects for the level from module courses
         par = list[level - 1]
         pos = courses.getStart(level, 1)
         ballStationary = pos
+
+        objects = courses.getLvl(level)
