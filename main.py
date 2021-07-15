@@ -341,3 +341,11 @@ def endScreen():  # Display this screen when the user completes trhe course
             if event.type == pygame.QUIT:
                 pygame.quit()
                 break
+
+
+def setup(level):  # Setup objects for the level from module courses
+    global line, par, hole, power, ballStationary, objects, ballColor, stickyPower, superPower, mullagain
+    ballColor = (255, 255, 255)
+    stickyPower = False
+    superPower = False
+    mullagain = False
