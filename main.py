@@ -349,3 +349,5 @@ def setup(level):  # Setup objects for the level from module courses
     stickyPower = False
     superPower = False
     mullagain = False
+    if level >= 10:
+        endScreen()  # Completed the course
