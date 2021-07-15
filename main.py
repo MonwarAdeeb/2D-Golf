@@ -351,3 +351,8 @@ def setup(level):  # Setup objects for the level from module courses
     mullagain = False
     if level >= 10:
         endScreen()  # Completed the course
+    else:
+        list = courses.getPar(1)
+        par = list[level - 1]
+        pos = courses.getStart(level, 1)
+        ballStationary = pos
