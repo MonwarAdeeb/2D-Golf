@@ -358,3 +358,17 @@ def setup(level):  # Setup objects for the level from module courses
         ballStationary = pos
 
         objects = courses.getLvl(level)
+
+        # Create the borders if sand is one of the objects
+        for i in objects:
+            if i[4] == 'sand':
+                objects.append([i[0] - 16, i[1], 16, 64, 'edge'])
+                objects.append(
+                    [i[0] + ((i[2] // 64) * 64), i[1], 16, 64, 'edge'])
+                objects.append([i[0], i[1] + 64, i[2], 16, 'bottom'])
+            elif i[4] == 'flag':
+                # Define the position of the hole
+                hole = (i[0] + 2, i[1] + i[3])
+
+        line = None
+        power = 1
