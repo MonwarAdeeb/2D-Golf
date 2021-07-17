@@ -372,3 +372,14 @@ def setup(level):  # Setup objects for the level from module courses
 
         line = None
         power = 1
+
+
+def fade():  # Fade out screen when player gets ball in hole
+    fade = pygame.Surface((winwidth, winheight))
+    fade.fill((0, 0, 0))
+    for alpha in range(0, 300):
+        fade.set_alpha(alpha)
+        redrawWindow(ballStationary, None, False, False)
+        win.blit(fade, (0, 0))
+        pygame.display.update()
+        pygame.time.delay(1)
