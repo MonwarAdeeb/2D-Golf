@@ -383,3 +383,12 @@ def fade():  # Fade out screen when player gets ball in hole
         win.blit(fade, (0, 0))
         pygame.display.update()
         pygame.time.delay(1)
+
+
+def showScore():  # Display the score from class scoreSheet
+    global level
+    sleep(2)
+    level += 1
+    sheet.drawSheet(strokes)
+    pygame.display.update()
+    go = True
