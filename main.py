@@ -413,3 +413,5 @@ def holeInOne():  # If player gets a hole in one display special mesage to scree
 def displayScore(stroke, par):  # Using proper golf terminology display score
     if stroke == 0:
         text = 'Skipped'
+    elif stroke == par - 4:
+        text = '-4 !'
