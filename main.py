@@ -399,3 +399,9 @@ def showScore():  # Display the score from class scoreSheet
             if event.type == pygame.MOUSEBUTTONDOWN:
                 go = False
                 setup(level)
+
+
+def holeInOne():  # If player gets a hole in one display special mesage to screen
+    text = myFont.render('Hole in One!', 1, (255, 255, 255))
+    x = (winwidth / 2) - (text.get_width() / 2)
+    y = (winheight / 2) - (text.get_height() / 2)
