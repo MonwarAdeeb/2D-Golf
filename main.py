@@ -392,3 +392,7 @@ def showScore():  # Display the score from class scoreSheet
     sheet.drawSheet(strokes)
     pygame.display.update()
     go = True
+    while go:  # Wait until user clicks until we move to next level
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
