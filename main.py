@@ -405,3 +405,6 @@ def holeInOne():  # If player gets a hole in one display special mesage to scree
     text = myFont.render('Hole in One!', 1, (255, 255, 255))
     x = (winwidth / 2) - (text.get_width() / 2)
     y = (winheight / 2) - (text.get_height() / 2)
+    win.blit(text, (x, y))
+    pygame.display.update()
+    showScore()
