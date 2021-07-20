@@ -421,3 +421,5 @@ def displayScore(stroke, par):  # Using proper golf terminology display score
         text = 'Eagle!'
     elif stroke == par - 1:
         text = 'Birdie!'
+    elif stroke == par:
+        text = 'Par'
