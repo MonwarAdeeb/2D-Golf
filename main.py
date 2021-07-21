@@ -429,3 +429,5 @@ def displayScore(stroke, par):  # Using proper golf terminology display score
         text = 'Double Bogey :('
     elif stroke == par + 3:
         text = 'Triple Bogey :('
+    else:
+        text = '+ ' + str(stroke - par) + ' :('
