@@ -435,3 +435,6 @@ def displayScore(stroke, par):  # Using proper golf terminology display score
     label = myFont.render(text, 1, (255, 255, 255))
     win.blit(label, ((winwidth//2) - (label.get_width() // 2),
                      (winheight//2) - (label.get_height()//2)))
+    pygame.display.update()
+
+    showScore()
