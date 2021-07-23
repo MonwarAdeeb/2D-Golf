@@ -445,3 +445,5 @@ def redrawWindow(ball, line, shoot=False, update=True):
 
     win.blit(background, (-200, -100))  # REFRESH DISPLAY
     for x in powerUpButtons:  # Draw the power up buttons in top right
+        pygame.draw.circle(win, (0, 0, 0), (x[0], x[1]), x[2] + 2)
+        pygame.draw.circle(win, x[4], (x[0], x[1]), x[2])
