@@ -442,3 +442,6 @@ def displayScore(stroke, par):  # Using proper golf terminology display score
 
 def redrawWindow(ball, line, shoot=False, update=True):
     global water, par, strokes, flagx
+
+    win.blit(background, (-200, -100))  # REFRESH DISPLAY
+    for x in powerUpButtons:  # Draw the power up buttons in top right
