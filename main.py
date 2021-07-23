@@ -438,3 +438,7 @@ def displayScore(stroke, par):  # Using proper golf terminology display score
     pygame.display.update()
 
     showScore()
+
+
+def redrawWindow(ball, line, shoot=False, update=True):
+    global water, par, strokes, flagx
