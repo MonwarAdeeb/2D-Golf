@@ -455,3 +455,6 @@ def redrawWindow(ball, line, shoot=False, update=True):
     smallFont = pygame.font.SysFont('comicsansms', 20)
     text = smallFont.render('Left: ' + str(powerUps), 1, (64, 64, 64))
     win.blit(text, (920, 55))
+
+    text = parFont.render('Par: ' + str(par), 1, (64, 64, 64))
+    win.blit(text, (20, 10))
