@@ -458,3 +458,5 @@ def redrawWindow(ball, line, shoot=False, update=True):
 
     text = parFont.render('Par: ' + str(par), 1, (64, 64, 64))
     win.blit(text, (20, 10))
+    text = parFont.render('Strokes: ' + str(strokes), 1, (64, 64, 64))
+    win.blit(text, (18, 45))
