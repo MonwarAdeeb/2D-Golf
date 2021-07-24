@@ -450,3 +450,8 @@ def redrawWindow(ball, line, shoot=False, update=True):
         text = parFont.render(x[3], 1, (255, 255, 255))
         win.blit(text, (x[0] - (text.get_width()/2),
                         x[1] - (text.get_height()/2)))
+
+    # Draw information such as strokes, par and powerups left
+    smallFont = pygame.font.SysFont('comicsansms', 20)
+    text = smallFont.render('Left: ' + str(powerUps), 1, (64, 64, 64))
+    win.blit(text, (920, 55))
