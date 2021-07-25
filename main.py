@@ -460,3 +460,9 @@ def redrawWindow(ball, line, shoot=False, update=True):
     win.blit(text, (20, 10))
     text = parFont.render('Strokes: ' + str(strokes), 1, (64, 64, 64))
     win.blit(text, (18, 45))
+
+    # Draw all objects in the level, each object has a specific image and orientation
+    for i in objects:
+        if i[4] == 'sand':
+            for x in range(i[2]//64):
+                win.blit(sand, (i[0] + (x * 64), i[1]))
