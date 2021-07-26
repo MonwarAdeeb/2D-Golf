@@ -466,3 +466,8 @@ def redrawWindow(ball, line, shoot=False, update=True):
         if i[4] == 'sand':
             for x in range(i[2]//64):
                 win.blit(sand, (i[0] + (x * 64), i[1]))
+        elif i[4] == 'water':
+            for x in range(i[2] // 64):
+                water = water.convert()
+                water.set_alpha(170)
+                win.blit(water, (i[0] + (x * 64), i[1]))
