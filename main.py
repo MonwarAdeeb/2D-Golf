@@ -471,3 +471,5 @@ def redrawWindow(ball, line, shoot=False, update=True):
                 water = water.convert()
                 water.set_alpha(170)
                 win.blit(water, (i[0] + (x * 64), i[1]))
+        elif i[4] == 'edge':
+            win.blit(edge, (i[0], i[1]))
