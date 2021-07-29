@@ -480,3 +480,6 @@ def redrawWindow(ball, line, shoot=False, update=True):
             win.blit(flag, (i[0], i[1]))
             pygame.draw.circle(win, (0, 0, 0), (i[0] + 2, i[1] + i[3]), 6)
             flagx = i[0]
+        elif i[4] == 'floor':
+            for x in range(i[2] // 64):
+                win.blit(bottom, (i[0] + 64 * x, i[1]))
