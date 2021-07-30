@@ -495,3 +495,7 @@ def redrawWindow(ball, line, shoot=False, update=True):
         elif i[4] == 'sticky':
             for x in range(i[3]//64):
                 win.blit(sticky, (i[0], i[1] + (64 * x)))
+        elif i[4] == 'coin':
+            if i[5]:
+                img = coinImg()
+                win.blit(img, (i[0], i[1]))
