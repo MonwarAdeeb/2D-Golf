@@ -499,3 +499,5 @@ def redrawWindow(ball, line, shoot=False, update=True):
             if i[5]:
                 img = coinImg()
                 win.blit(img, (i[0], i[1]))
+
+    win.blit(powerMeter, (4, 520))
