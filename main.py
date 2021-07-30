@@ -483,3 +483,6 @@ def redrawWindow(ball, line, shoot=False, update=True):
         elif i[4] == 'floor':
             for x in range(i[2] // 64):
                 win.blit(bottom, (i[0] + 64 * x, i[1]))
+        elif i[4] == 'green':
+            for x in range(i[2] // 64):
+                win.blit(green, (i[0] + (64 * x), i[1]))
