@@ -489,3 +489,6 @@ def redrawWindow(ball, line, shoot=False, update=True):
         elif i[4] == 'wall':
             for x in range(i[3] // 64):
                 win.blit(edge, (i[0], i[1] + (64 * x)))
+        elif i[4] == 'laser':
+            for x in range(i[3] // 64):
+                win.blit(laser, (i[0], i[1] + (64 * x)))
