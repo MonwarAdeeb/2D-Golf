@@ -501,3 +501,7 @@ def redrawWindow(ball, line, shoot=False, update=True):
                 win.blit(img, (i[0], i[1]))
 
     win.blit(powerMeter, (4, 520))
+
+    # If we are not in the process of shooting show the angle line
+    if line != None and not (shoot):
+        pygame.draw.line(win, (0, 0, 0), ballStationary, line, 2)
