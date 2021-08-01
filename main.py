@@ -505,3 +505,10 @@ def redrawWindow(ball, line, shoot=False, update=True):
     # If we are not in the process of shooting show the angle line
     if line != None and not (shoot):
         pygame.draw.line(win, (0, 0, 0), ballStationary, line, 2)
+
+    # Draw the ball and its outline
+    pygame.draw.circle(win, (0, 0, 0), ball, 5)
+    pygame.draw.circle(win, ballColor, ball, 4)
+
+    if update:
+        powerBar()
