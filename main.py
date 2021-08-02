@@ -512,3 +512,8 @@ def redrawWindow(ball, line, shoot=False, update=True):
 
     if update:
         powerBar()
+
+
+def coinImg():  # Animation for spinning coin, coin acts as currency
+    global coinTime, coinIndex
+    coinTime += 1
