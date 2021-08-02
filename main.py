@@ -520,3 +520,5 @@ def coinImg():  # Animation for spinning coin, coin acts as currency
     if coinTime == 15:  # We don't want to delay the game so we use a count variable based off the clock speed
         coinIndex += 1
         coinTime = 0
+    if coinIndex == 8:
+        coinIndex = 0
