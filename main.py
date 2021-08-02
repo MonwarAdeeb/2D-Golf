@@ -522,3 +522,4 @@ def coinImg():  # Animation for spinning coin, coin acts as currency
         coinTime = 0
     if coinIndex == 8:
         coinIndex = 0
+    return coinPics[coinIndex]
