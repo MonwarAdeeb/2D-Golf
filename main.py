@@ -523,3 +523,12 @@ def coinImg():  # Animation for spinning coin, coin acts as currency
     if coinIndex == 8:
         coinIndex = 0
     return coinPics[coinIndex]
+
+
+def powerBar(moving=False, angle=0):
+    if moving:
+        # Move the arm on the power meter if we've locked the angle
+        redrawWindow(ballStationary, line, False, False)
+        pygame.draw.line(win, (255, 255, 255), (80, winheight - 7), (int(80 + round(
+            math.cos(angle) * 60)), int((winheight - (math.sin(angle) * 60)))), 3)
+    pygame.display.update()
