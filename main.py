@@ -540,3 +540,8 @@ def findAngle(pos):
     sY = ballStationary[1]
     try:
         angle = math.atan((sY - pos[1]) / (sX - pos[0]))
+    except:
+        angle = math.pi / 2
+
+    if pos[1] < sY and pos[0] > sX:
+        angle = abs(angle)
