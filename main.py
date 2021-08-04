@@ -538,3 +538,5 @@ def powerBar(moving=False, angle=0):
 def findAngle(pos):
     sX = ballStationary[0]
     sY = ballStationary[1]
+    try:
+        angle = math.atan((sY - pos[1]) / (sX - pos[0]))
