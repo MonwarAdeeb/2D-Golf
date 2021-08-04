@@ -545,3 +545,11 @@ def findAngle(pos):
 
     if pos[1] < sY and pos[0] > sX:
         angle = abs(angle)
+    elif pos[1] < sY and pos[0] < sX:
+        angle = math.pi - angle
+    elif pos[1] > sY and pos[0] < sX:
+        angle = math.pi + abs(angle)
+    elif pos[1] > sY and pos[0] > sX:
+        angle = (math.pi * 2) - angle
+
+    return angle
