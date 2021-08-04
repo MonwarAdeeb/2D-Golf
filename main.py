@@ -532,3 +532,9 @@ def powerBar(moving=False, angle=0):
         pygame.draw.line(win, (255, 255, 255), (80, winheight - 7), (int(80 + round(
             math.cos(angle) * 60)), int((winheight - (math.sin(angle) * 60)))), 3)
     pygame.display.update()
+
+
+# Find the angle that the ball hits the ground at
+def findAngle(pos):
+    sX = ballStationary[0]
+    sY = ballStationary[1]
