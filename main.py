@@ -553,3 +553,7 @@ def findAngle(pos):
         angle = (math.pi * 2) - angle
 
     return angle
+
+
+def onGreen():  # Determine if we are on the green
+    global hole
