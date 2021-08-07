@@ -557,3 +557,10 @@ def findAngle(pos):
 
 def onGreen():  # Determine if we are on the green
     global hole
+
+    for i in objects:
+        if i[4] == 'green':
+            if ballStationary[1] < i[1] + i[3] and ballStationary[1] > i[1] - 20 and ballStationary[0] > i[0] and ballStationary[0] < i[0] + i[2]:
+                return True
+            else:
+                return False
