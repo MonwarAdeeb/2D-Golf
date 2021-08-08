@@ -564,3 +564,13 @@ def onGreen():  # Determine if we are on the green
                 return True
             else:
                 return False
+
+
+def overHole(x, y):  # Determine if we are over top of the hole
+    if x > hole[0] - 6 and x < hole[0] + 6:
+        if y > hole[1] - 13 and y < hole[1] + 10:
+            return True
+        else:
+            return False
+    else:
+        return False
