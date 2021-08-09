@@ -595,3 +595,5 @@ setup(1)
 
 # Start loop
 # Display start screen
+hover = False
+starting = True
