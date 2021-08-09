@@ -592,3 +592,6 @@ setup(1)
 # - Shooting the ball, uses physics module
 # - Keeping track of strokes
 # - Calls all functions and uses modules/classes imported and defined above
+
+# Start loop
+# Display start screen
