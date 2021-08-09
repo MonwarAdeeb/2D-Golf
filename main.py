@@ -574,3 +574,12 @@ def overHole(x, y):  # Determine if we are over top of the hole
             return False
     else:
         return False
+
+
+list = courses.getPar(1)
+par = list[level - 1]
+sheet = scoreSheet(list)
+
+pos = courses.getStart(level, 1)
+ballStationary = pos
+setup(1)
