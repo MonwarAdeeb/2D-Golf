@@ -583,3 +583,12 @@ sheet = scoreSheet(list)
 pos = courses.getStart(level, 1)
 ballStationary = pos
 setup(1)
+
+
+# MAIN GAME LOOP:
+# - Collision of ball
+# - Locking angle and power
+# - Checking if power up buttons are clicked
+# - Shooting the ball, uses physics module
+# - Keeping track of strokes
+# - Calls all functions and uses modules/classes imported and defined above
