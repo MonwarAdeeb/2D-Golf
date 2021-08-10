@@ -597,3 +597,6 @@ setup(1)
 # Display start screen
 hover = False
 starting = True
+while starting:
+    pygame.time.delay(10)
+    startScreen.mainScreen(hover)
