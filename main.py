@@ -606,3 +606,5 @@ while starting:
             hover = startScreen.shopClick(pos)
             course = startScreen.click(pos)
             startScreen.mouseOver(course != None)
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            pos = pygame.mouse.get_pos()
