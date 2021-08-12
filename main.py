@@ -611,3 +611,8 @@ while starting:
             if startScreen.click(pos) != None:
                 starting = False
                 break
+            if startScreen.shopClick(pos) == True:
+                surface = startScreen.drawShop()
+                win.blit(surface, (0, 0))
+                pygame.display.update()
+                shop = True
