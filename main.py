@@ -616,3 +616,20 @@ while starting:
                 win.blit(surface, (0, 0))
                 pygame.display.update()
                 shop = True
+                while shop:
+                    for event in pygame.event.get():
+                        pygame.time.delay(10)
+                        if event.type == pygame.QUIT:
+                            pygame.quit()
+                        if event.type == pygame.MOUSEBUTTONDOWN:
+                            pos = pygame.mouse.get_pos()
+                            if pos[0] > 10 and pos[0] < 100 and pos[1] > 560:
+                                shop = False
+                                break
+                            surface = startScreen.drawShop(pos, True)
+                            win.blit(surface, (0, 0))
+                            pygame.display.update()
+
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            break
