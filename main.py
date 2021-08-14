@@ -660,3 +660,5 @@ while True:
                 if pos[0] < x[0] + x[2] and pos[0] > x[0] - x[2] and pos[1] < x[1] + x[2] and pos[1] > x[1] - x[2]:
                     if x[3] == 'S':
                         x[4] = (255, 0, 120)
+                    elif x[3] == 'M':
+                        x[4] = (105, 75, 75)
