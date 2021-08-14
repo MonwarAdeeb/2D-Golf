@@ -656,3 +656,5 @@ while True:
                 strokes = 0
         if event.type == pygame.MOUSEMOTION:
             pos = pygame.mouse.get_pos()
+for x in powerUpButtons:
+    if pos[0] < x[0] + x[2] and pos[0] > x[0] - x[2] and pos[1] < x[1] + x[2] and pos[1] > x[1] - x[2]:
