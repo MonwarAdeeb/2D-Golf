@@ -650,3 +650,5 @@ while True:
                 fade()
                 if strokes == 1:
                     holeInOne()
+                else:
+                    displayScore(strokes, par)
