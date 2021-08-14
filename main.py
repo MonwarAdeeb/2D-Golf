@@ -638,3 +638,5 @@ while starting:
 while True:
     if stickyPower == False and superPower == False:
         ballColor = startScreen.getBallColor()
+        if ballColor == None:
+            ballColor = (255, 255, 255)
