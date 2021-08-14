@@ -652,3 +652,7 @@ while True:
                     holeInOne()
                 else:
                     displayScore(strokes, par)
+
+                strokes = 0
+        if event.type == pygame.MOUSEMOTION:
+            pos = pygame.mouse.get_pos()
