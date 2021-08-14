@@ -640,3 +640,6 @@ while True:
         ballColor = startScreen.getBallColor()
         if ballColor == None:
             ballColor = (255, 255, 255)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
