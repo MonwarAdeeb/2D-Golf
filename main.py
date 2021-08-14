@@ -648,3 +648,5 @@ while True:
                 pygame.quit()
             if event.key == pygame.K_SPACE:
                 fade()
+                if strokes == 1:
+                    holeInOne()
