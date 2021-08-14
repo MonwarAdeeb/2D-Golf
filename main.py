@@ -633,3 +633,8 @@ while starting:
         if event.type == pygame.QUIT:
             pygame.quit()
             break
+
+# Game Loop for levels and collision
+while True:
+    if stickyPower == False and superPower == False:
+        ballColor = startScreen.getBallColor()
