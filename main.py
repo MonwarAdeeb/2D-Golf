@@ -675,3 +675,6 @@ while True:
         if event.type == pygame.MOUSEBUTTONDOWN:
             lock = 0
             pos = pygame.mouse.get_pos()
+            # See if power up buttons are clicked
+            for x in powerUpButtons:
+                # Check collision of mouse and button
