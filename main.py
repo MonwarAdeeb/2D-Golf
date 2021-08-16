@@ -702,3 +702,8 @@ while True:
                             else:
                                 strokes -= 1
                             hazard = False
+                    elif x[3] == 'P':  # Power ball, power is multiplied by 1.5x
+                        if superPower is False and stickyPower is False and powerUps > 0:
+                            superPower = True
+                            powerUps -= 1
+                            ballColor = (255, 69, 0)
