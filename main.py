@@ -680,3 +680,6 @@ while True:
                 # Check collision of mouse and button
                 if pos[0] < x[0] + x[2] and pos[0] > x[0] - x[2] and pos[1] < x[1] + x[2] and pos[1] > x[1] - x[2]:
                     lock = -1
+                    if powerUps == 0:
+                        error()
+                        break
