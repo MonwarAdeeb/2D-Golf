@@ -678,3 +678,5 @@ while True:
             # See if power up buttons are clicked
             for x in powerUpButtons:
                 # Check collision of mouse and button
+                if pos[0] < x[0] + x[2] and pos[0] > x[0] - x[2] and pos[1] < x[1] + x[2] and pos[1] > x[1] - x[2]:
+                    lock = -1
