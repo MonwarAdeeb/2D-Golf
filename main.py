@@ -683,3 +683,8 @@ while True:
                     if powerUps == 0:
                         error()
                         break
+                    elif x[3] == 'S':  # Sticky Ball (sticks to any non-hazard)
+                        if stickyPower is False and superPower is False and powerUps > 0:
+                            stickyPower = True
+                            powerUps -= 1
+                            ballColor = (255, 0, 255)
