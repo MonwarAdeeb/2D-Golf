@@ -688,3 +688,17 @@ while True:
                             stickyPower = True
                             powerUps -= 1
                             ballColor = (255, 0, 255)
+                    elif x[3] == 'M':  # Mullagain, allows you to retry your sot from your previous position, will remove strokes u had on last shot
+                        if mullagain is False and powerUps > 0 and strokes >= 1:
+                            mullagain = True
+                            powerUps -= 1
+                            ballStationary = shootPos
+                            pos = pygame.mouse.get_pos()
+                            angle = findAngle(pos)
+                            line = (round(ballStationary[0] + (math.cos(angle) * 50)),
+                                    round(ballStationary[1] - (math.sin(angle) * 50)))
+                            if hazard:
+                                strokes -= 2
+                            else:
+                                strokes -= 1
+                            hazard = False
