@@ -671,3 +671,7 @@ while True:
                         x[4] = (105, 105, 105)
                     elif x[3] == 'P':
                         x[4] = (255, 69, 0)
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            lock = 0
+            pos = pygame.mouse.get_pos()
