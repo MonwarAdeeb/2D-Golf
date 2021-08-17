@@ -721,3 +721,5 @@ while True:
                         powerAngle -= 0.1 * neg
                         powerBar(True, powerAngle)
                         loopTime = 0
+                        if powerAngle < 0 or powerAngle > math.pi:
+                            neg = neg * -1
