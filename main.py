@@ -707,3 +707,10 @@ while True:
                             superPower = True
                             powerUps -= 1
                             ballColor = (255, 69, 0)
+
+            # If you click the power up button don't lock angle
+            if lock == 0:
+                powerAngle = math.pi
+                neg = 1
+                powerLock = False
+                loopTime = 0
