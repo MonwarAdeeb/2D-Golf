@@ -725,3 +725,7 @@ while True:
                             neg = neg * -1
                     else:
                         redrawWindow(ballStationary, line, False, False)
+
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            pygame.quit()
