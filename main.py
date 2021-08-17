@@ -717,3 +717,7 @@ while True:
 
                 while not powerLock:  # If we haven't locked power stay in this loop until we do
                     loopTime += 1
+                    if loopTime == 6:
+                        powerAngle -= 0.1 * neg
+                        powerBar(True, powerAngle)
+                        loopTime = 0
