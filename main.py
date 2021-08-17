@@ -714,3 +714,6 @@ while True:
                 neg = 1
                 powerLock = False
                 loopTime = 0
+
+                while not powerLock:  # If we haven't locked power stay in this loop until we do
+                    loopTime += 1
