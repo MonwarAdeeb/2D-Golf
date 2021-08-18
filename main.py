@@ -746,3 +746,6 @@ while True:
                                     power = (math.pi - powerAngle) * 30
                                 else:
                                     power = (math.pi - powerAngle) * 40
+                            shootPos = ballStationary
+                            powerLock = True
+                            break
