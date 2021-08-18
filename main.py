@@ -749,3 +749,20 @@ while True:
                             shootPos = ballStationary
                             powerLock = True
                             break
+
+        if event.type == pygame.MOUSEMOTION:  # Change the position of the angle line
+            pos = pygame.mouse.get_pos()
+            angle = findAngle(pos)
+            line = (round(ballStationary[0] + (math.cos(angle) * 50)),
+                    round(ballStationary[1] - (math.sin(angle) * 50)))
+
+            if onGreen():  # If we are on green have the angle lin point towards the hole, bc putter cannot chip
+                if ballStationary[0] > flagx:
+                    angle = math.pi
+                    line = (ballStationary[0] - 30, ballStationary[1])
+                else:
+                    angle = 0
+                    line = (ballStationary[0] + 30, ballStationary[1])
+
+    redrawWindow(ballStationary, line)
+    hitting = False
