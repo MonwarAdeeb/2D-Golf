@@ -738,3 +738,6 @@ while True:
                                 put = True
                                 if SOUND:
                                     puttSound.play()
+                            if put:
+                                power = (math.pi - powerAngle) * 5
+                                rollVel = power
