@@ -732,3 +732,5 @@ while True:
                         if event.type == pygame.MOUSEBUTTONDOWN:
                             strokes += 1
                             hazard = False
+                            if not onGreen():
+                                shoot = True
