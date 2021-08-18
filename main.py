@@ -741,3 +741,6 @@ while True:
                             if put:
                                 power = (math.pi - powerAngle) * 5
                                 rollVel = power
+                            else:
+                                if not superPower:  # Change power if we selected power ball
+                                    power = (math.pi - powerAngle) * 30
