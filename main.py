@@ -744,3 +744,5 @@ while True:
                             else:
                                 if not superPower:  # Change power if we selected power ball
                                     power = (math.pi - powerAngle) * 30
+                                else:
+                                    power = (math.pi - powerAngle) * 40
