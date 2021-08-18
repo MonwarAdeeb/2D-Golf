@@ -736,3 +736,5 @@ while True:
                                 shoot = True
                             else:
                                 put = True
+                                if SOUND:
+                                    puttSound.play()
