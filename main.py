@@ -734,3 +734,5 @@ while True:
                             hazard = False
                             if not onGreen():
                                 shoot = True
+                            else:
+                                put = True
