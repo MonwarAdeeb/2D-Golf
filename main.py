@@ -766,3 +766,9 @@ while True:
 
     redrawWindow(ballStationary, line)
     hitting = False
+
+    while put and not shoot:  # If we are putting
+        # If we aren't in the hole
+        if not(overHole(ballStationary[0], ballStationary[1])):
+            pygame.time.delay(20)
+            rollVel -= 0.5  # Slow down the ball gradually
