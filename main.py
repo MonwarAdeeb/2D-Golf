@@ -775,3 +775,7 @@ while True:
             if angle == math.pi:
                 ballStationary = (
                     round(ballStationary[0] - rollVel), ballStationary[1])
+            else:
+                ballStationary = (
+                    round(ballStationary[0] + rollVel), ballStationary[1])
+            redrawWindow(ballStationary, None, True)
