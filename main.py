@@ -787,3 +787,9 @@ while True:
                 angle = findAngle(pos)
                 line = (round(ballStationary[0] + (math.cos(angle) * 50)),
                         round(ballStationary[1] - (math.sin(angle) * 50)))
+
+                # Determine what way to point the angle line
+                if onGreen():
+                    if ballStationary[0] > flagx:
+                        angle = math.pi
+                        line = (ballStationary[0] - 30, ballStationary[1])
