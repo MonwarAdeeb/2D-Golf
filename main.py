@@ -793,3 +793,6 @@ while True:
                     if ballStationary[0] > flagx:
                         angle = math.pi
                         line = (ballStationary[0] - 30, ballStationary[1])
+                    else:
+                        angle = 0
+                        line = (ballStationary[0] + 30, ballStationary[1])
