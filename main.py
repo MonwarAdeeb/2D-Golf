@@ -772,3 +772,6 @@ while True:
         if not(overHole(ballStationary[0], ballStationary[1])):
             pygame.time.delay(20)
             rollVel -= 0.5  # Slow down the ball gradually
+            if angle == math.pi:
+                ballStationary = (
+                    round(ballStationary[0] - rollVel), ballStationary[1])
