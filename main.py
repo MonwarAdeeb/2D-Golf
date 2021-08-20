@@ -779,3 +779,11 @@ while True:
                 ballStationary = (
                     round(ballStationary[0] + rollVel), ballStationary[1])
             redrawWindow(ballStationary, None, True)
+
+            if rollVel < 0.5:  # Stop moving ball if power is low enough
+                time = 0
+                put = False
+                pos = pygame.mouse.get_pos()
+                angle = findAngle(pos)
+                line = (round(ballStationary[0] + (math.cos(angle) * 50)),
+                        round(ballStationary[1] - (math.sin(angle) * 50)))
