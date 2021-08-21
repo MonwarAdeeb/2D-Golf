@@ -804,3 +804,5 @@ while True:
                 pygame.time.delay(20)
                 redrawWindow(ballStationary, None, True)
                 ballStationary = (ballStationary[0], ballStationary[1] + 1)
+                if ballStationary[0] > hole[0]:
+                    ballStationary = (ballStationary[0] - 1, ballStationary[1])
