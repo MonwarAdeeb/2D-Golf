@@ -809,3 +809,7 @@ while True:
                     ballStationary = (ballStationary[0] - 1, ballStationary[1])
                 else:
                     ballStationary = (ballStationary[0] + 1, ballStationary[1])
+
+                if ballStationary[1] > hole[1] + 5:
+                    put = False
+                    break
