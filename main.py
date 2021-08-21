@@ -813,3 +813,8 @@ while True:
                 if ballStationary[1] > hole[1] + 5:
                     put = False
                     break
+
+            # Advance to score board
+            fade()
+            if strokes == 1:
+                holeInOne()
