@@ -796,3 +796,7 @@ while True:
                     else:
                         angle = 0
                         line = (ballStationary[0] + 30, ballStationary[1])
+        else:
+            # We have got the ball in the hole
+            if SOUND:
+                inHole.play()
