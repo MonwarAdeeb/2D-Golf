@@ -800,3 +800,7 @@ while True:
             # We have got the ball in the hole
             if SOUND:
                 inHole.play()
+            while True:
+                pygame.time.delay(20)
+                redrawWindow(ballStationary, None, True)
+                ballStationary = (ballStationary[0], ballStationary[1] + 1)
