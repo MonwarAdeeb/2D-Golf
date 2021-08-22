@@ -822,3 +822,12 @@ while True:
                 displayScore(strokes, par)
 
             strokes = 0
+
+    while shoot:  # If we are shooting the ball
+        # If we aren't in the hole
+        if not(overHole(ballStationary[0], ballStationary[1])):
+            maxT = physics.maxTime(power, angle)
+            time += 0.085
+            ballCords = physics.ballPath(
+                ballStationary[0], ballStationary[1], power, angle, time)
+            redrawWindow(ballCords, None, True)
