@@ -831,3 +831,15 @@ while True:
             ballCords = physics.ballPath(
                 ballStationary[0], ballStationary[1], power, angle, time)
             redrawWindow(ballCords, None, True)
+
+            # TO FIX GLITCH WHERE YOU GO THROUGH WALLS AND FLOORS
+            if ballCords[1] > 650:
+                var = True
+                while var:
+                    fade()
+                    if strokes == 1:
+                        holeInOne()
+                    else:
+                        displayScore(strokes, par)
+
+                    strokes = 0
