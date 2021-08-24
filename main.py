@@ -882,3 +882,22 @@ while True:
                         superPower = False
                         mullagain = False
                         break
+
+                elif i[4] == 'water':
+                    if ballCords[1] > i[1] - 6 and ballCords[1] < i[1] + 8 and ballCords[0] < i[0] + i[2] and ballCords[0] > i[0] + 2:
+                        ballCords = shootPos
+                        subtract = 0
+                        hazard = True
+                        ballStationary = ballCords
+                        time = 0
+                        pos = pygame.mouse.get_pos()
+                        angle = findAngle(pos)
+                        line = (round(ballStationary[0] + (math.cos(angle) * 50)), round(
+                            ballStationary[1] - (math.sin(angle) * 50)))
+                        power = 1
+                        powerAngle = math.pi
+                        shoot = False
+                        strokes += 1
+
+                        label = myFont.render(
+                            'Water Hazard, +1 stroke', 1, (255, 255, 255))
