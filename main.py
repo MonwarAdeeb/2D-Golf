@@ -843,3 +843,7 @@ while True:
                         displayScore(strokes, par)
 
                     strokes = 0
+
+            # COLLISION LOOP, VERY COMPLEX,
+            # - All angles are in radians
+            # - Physics are in general real and correct
