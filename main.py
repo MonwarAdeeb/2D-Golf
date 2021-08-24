@@ -850,3 +850,7 @@ while True:
 
             for i in objects:  # for every object in the level
                 if i[4] == 'coin':  # If the ball hits a coin
+                    if i[5]:
+                        if ballCords[0] < i[0] + i[2] and ballCords[0] > i[0] and ballCords[1] > i[1] and ballCords[1] < i[1] + i[3]:
+                            courses.coinHit(level - 1)
+                            coins += 1
