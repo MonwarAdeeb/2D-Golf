@@ -854,3 +854,19 @@ while True:
                         if ballCords[0] < i[0] + i[2] and ballCords[0] > i[0] and ballCords[1] > i[1] and ballCords[1] < i[1] + i[3]:
                             courses.coinHit(level - 1)
                             coins += 1
+
+                if i[4] == 'laser':  # if the ball hits the laser hazard
+                    if ballCords[0] > i[0] and ballCords[0] < i[0] + i[2] and ballCords[1] > i[1] and ballCords[1] < i[1] + i[3]:
+                        ballCords = shootPos
+                        hazard = True
+                        subtract = 0
+                        ballStationary = ballCords
+                        time = 0
+                        pos = pygame.mouse.get_pos()
+                        angle = findAngle(pos)
+                        line = (round(ballStationary[0] + (math.cos(angle) * 50)),
+                                round(ballStationary[1] - (math.sin(angle) * 50)))
+                        power = 1
+                        powerAngle = math.pi
+                        shoot = False
+                        strokes += 1
