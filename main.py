@@ -847,3 +847,6 @@ while True:
             # COLLISION LOOP, VERY COMPLEX,
             # - All angles are in radians
             # - Physics are in general real and correct
+
+            for i in objects:  # for every object in the level
+                if i[4] == 'coin':  # If the ball hits a coin
