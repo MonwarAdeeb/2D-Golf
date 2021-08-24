@@ -870,3 +870,15 @@ while True:
                         powerAngle = math.pi
                         shoot = False
                         strokes += 1
+
+                        label = myFont.render(
+                            'Laser Hazard, +1 stroke', 1, (255, 255, 255))
+                        win.blit(label, (winwidth / 2 - label.get_width() /
+                                         2, winheight / 2 - label.get_height() / 2))
+                        pygame.display.update()
+                        pygame.time.delay(1000)
+                        ballColor = (255, 255, 255)
+                        stickyPower = False
+                        superPower = False
+                        mullagain = False
+                        break
