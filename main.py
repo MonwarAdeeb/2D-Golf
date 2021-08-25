@@ -901,3 +901,14 @@ while True:
 
                         label = myFont.render(
                             'Water Hazard, +1 stroke', 1, (255, 255, 255))
+                        if SOUND:
+                            splash.play()
+                        win.blit(label, (winwidth / 2 - label.get_width() /
+                                         2, winheight / 2 - label.get_height() / 2))
+                        pygame.display.update()
+                        pygame.time.delay(1500)
+                        ballColor = (255, 255, 255)
+                        stickyPower = False
+                        mullagain = False
+                        superPower = False
+                        break
