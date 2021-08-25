@@ -912,3 +912,19 @@ while True:
                         mullagain = False
                         superPower = False
                         break
+
+                elif i[4] != 'flag' and i[4] != 'coin':
+                    if ballCords[1] > i[1] - 2 and ballCords[1] < i[1] + 7 and ballCords[0] < i[0] + i[2] and ballCords[0] > i[0]:
+                        hitting = False
+                        power = physics.findPower(power, angle, time)
+                        if angle > math.pi * (1/2) and angle < math.pi:
+                            x = physics.findAngle(power, angle)
+                            angle = math.pi - x
+                        elif angle < math.pi / 2:
+                            angle = physics.findAngle(power, angle)
+                        elif angle > math.pi and angle < math.pi * (3/2):
+                            x = physics.findAngle(power, angle)
+                            angle = math.pi - x
+                        else:
+                            x = physics.findAngle(power, angle)
+                            angle = x
