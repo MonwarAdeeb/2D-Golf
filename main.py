@@ -960,3 +960,13 @@ while True:
                                         ballCords[0], ballCords[1] - subtract)
                                     power = 0
                                     break
+
+                            ballStationary = ballCords
+                            shoot = False
+                            time = 0
+                            pos = pygame.mouse.get_pos()
+                            angle = findAngle(pos)
+                            line = (round(ballStationary[0] + (math.cos(angle) * 50)),
+                                    round(ballStationary[1] - (math.sin(angle) * 50)))
+                            power = 1
+                            powerAngle = math.pi
