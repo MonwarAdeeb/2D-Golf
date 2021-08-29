@@ -970,3 +970,7 @@ while True:
                                     round(ballStationary[1] - (math.sin(angle) * 50)))
                             power = 1
                             powerAngle = math.pi
+
+                    elif ballCords[1] < i[1] + i[3] and ballCords[1] > i[1] and ballCords[0] > i[0] - 2 and ballCords[0] < i[0] + 10:
+                        hitting = False
+                        power = physics.findPower(power, angle, time)
