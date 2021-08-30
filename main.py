@@ -990,3 +990,11 @@ while True:
                         if time > 0.15:
                             time = 0
                         subtract = 0
+
+                        while True:
+                            subtract += 1
+                            if ballCords[0] - subtract < i[0] - 3:
+                                ballCords = (
+                                    ballCords[0] - subtract, ballCords[1])
+                                break
+                        ballStationary = ballCords
