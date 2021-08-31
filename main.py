@@ -998,3 +998,13 @@ while True:
                                     ballCords[0] - subtract, ballCords[1])
                                 break
                         ballStationary = ballCords
+
+                        if i[4] == 'sticky' or stickyPower:
+                            subtract = 0
+                            while True:
+                                subtract += 1
+                                if ballCords[0] - subtract < i[0] - 3:
+                                    ballCords = (
+                                        ballCords[0] - subtract, ballCords[1])
+                                    power = 0
+                                    break
