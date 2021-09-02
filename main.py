@@ -1014,3 +1014,5 @@ while True:
 
                         power = physics.findPower(power, angle, time)
                         if angle < math.pi:
+                            if not (time > maxT):
+                                angle = physics.findAngle(power, angle)
