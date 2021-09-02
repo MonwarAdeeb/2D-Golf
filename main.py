@@ -1019,3 +1019,6 @@ while True:
                             else:
                                 x = physics.findAngle(power, angle)
                                 angle = math.pi * 2 - x
+                        else:
+                            x = physics.findAngle(power, angle)
+                            angle = math.pi * 2 - x
