@@ -1016,3 +1016,6 @@ while True:
                         if angle < math.pi:
                             if not (time > maxT):
                                 angle = physics.findAngle(power, angle)
+                            else:
+                                x = physics.findAngle(power, angle)
+                                angle = math.pi * 2 - x
