@@ -1008,3 +1008,6 @@ while True:
                                         ballCords[0] - subtract, ballCords[1])
                                     power = 0
                                     break
+
+                    elif ballCords[1] < i[1] + i[3] and ballCords[1] > i[1] and ballCords[0] > i[0] + i[2] - 16 and ballCords[0] < i[0] + i[2]:
+                        hitting = False
