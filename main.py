@@ -1024,3 +1024,7 @@ while True:
                             angle = math.pi * 2 - x
 
                         power = power * 0.5
+
+                        if time > 0.15:
+                            time = 0
+                        subtract = 0
