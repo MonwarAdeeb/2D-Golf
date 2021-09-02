@@ -1041,3 +1041,8 @@ while True:
                             subtract = 0
                             while True:
                                 subtract += 1
+                                if ballCords[0] + subtract > i[0] + i[2] + 4:
+                                    ballCords = (
+                                        ballCords[0] + subtract, ballCords[1])
+                                    power = 0
+                                    break
