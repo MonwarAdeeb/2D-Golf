@@ -1028,3 +1028,6 @@ while True:
                         if time > 0.15:
                             time = 0
                         subtract = 0
+
+                        while True:
+                            subtract += 1
