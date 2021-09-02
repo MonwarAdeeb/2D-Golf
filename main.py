@@ -1039,3 +1039,5 @@ while True:
 
                         if i[4] == 'sticky' or stickyPower:
                             subtract = 0
+                            while True:
+                                subtract += 1
