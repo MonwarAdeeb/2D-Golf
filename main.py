@@ -1011,3 +1011,6 @@ while True:
 
                     elif ballCords[1] < i[1] + i[3] and ballCords[1] > i[1] and ballCords[0] > i[0] + i[2] - 16 and ballCords[0] < i[0] + i[2]:
                         hitting = False
+
+                        power = physics.findPower(power, angle, time)
+                        if angle < math.pi:
