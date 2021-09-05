@@ -1057,3 +1057,7 @@ while True:
                             else:
                                 x = physics.findAngle(power, angle)
                                 angle = 2 * math.pi - x
+
+                        power = power * 0.5
+                        if time > 0.04:
+                            time = 0
