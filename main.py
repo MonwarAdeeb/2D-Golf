@@ -1097,3 +1097,20 @@ while True:
                         mullagain = False
                         superPower = False
                         break
+
+        else:
+            if SOUND:
+                inHole.play()
+            var = True
+            while var:
+                pygame.time.delay(20)
+                redrawWindow(ballStationary, None, True)
+                ballStationary = (ballStationary[0], ballStationary[1] + 1)
+                if ballStationary[0] > hole[0]:
+                    ballStationary = (ballStationary[0] - 1, ballStationary[1])
+                else:
+                    ballStationary = (ballStationary[0] + 1, ballStationary[1])
+
+                if ballStationary[1] > hole[1] + 5:
+                    shoot = False
+                    var = False
