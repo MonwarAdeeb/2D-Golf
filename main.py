@@ -1061,3 +1061,11 @@ while True:
                         power = power * 0.5
                         if time > 0.04:
                             time = 0
+
+                        subtract = 0
+                        while True:
+                            subtract += 1
+                            if ballCords[1] + subtract > i[1] + i[3] + 8:
+                                ballCords = (
+                                    ballCords[0], ballCords[1] + subtract)
+                                break
