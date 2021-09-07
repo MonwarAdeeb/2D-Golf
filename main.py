@@ -800,12 +800,12 @@ while True:
             # We have got the ball in the hole
             if SOUND:
                 inHole.play()
+            # Move ball so it looks like it goes into the hole (increase y value)
             while True:
                 pygame.time.delay(20)
                 redrawWindow(ballStationary, None, True)
                 ballStationary = (ballStationary[0], ballStationary[1] + 1)
                 if ballStationary[0] > hole[0]:
-                    ballStationary = (ballStationary[0] - 1, ballStationary[1])
                     ballStationary = (ballStationary[0] - 1, ballStationary[1])
                 else:
                     ballStationary = (ballStationary[0] + 1, ballStationary[1])
@@ -1069,6 +1069,7 @@ while True:
                                 ballCords = (
                                     ballCords[0], ballCords[1] + subtract)
                                 break
+
                         if i[4] == 'sticky' or stickyPower:
                             subtract = 0
                             while True:
@@ -1122,3 +1123,14 @@ while True:
                 displayScore(strokes, par)
 
             strokes = 0
+
+    if onGreen():
+        if ballStationary[0] > flagx:
+            angle = math.pi
+            line = (ballStationary[0] - 30, ballStationary[1])
+        else:
+            angle = 0
+            line = (ballStationary[0] + 30, ballStationary[1])
+
+
+pygame.quit()
