@@ -1079,3 +1079,21 @@ while True:
                                     power = 0
                                     break
                         ballStationary = ballCords
+
+                    if power < 2.5:
+                        subtract = 0
+                        pygame.display.update()
+                        ballStationary = ballCords
+                        shoot = False
+                        time = 0
+                        pos = pygame.mouse.get_pos()
+                        angle = findAngle(pos)
+                        line = (round(ballStationary[0] + (math.cos(angle) * 50)), round(
+                            ballStationary[1] - (math.sin(angle) * 50)))
+                        power = 1
+                        powerAngle = math.pi
+                        ballColor = (255, 255, 255)
+                        stickyPower = False
+                        mullagain = False
+                        superPower = False
+                        break
