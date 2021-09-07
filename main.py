@@ -1114,3 +1114,11 @@ while True:
                 if ballStationary[1] > hole[1] + 5:
                     shoot = False
                     var = False
+
+            fade()
+            if strokes == 1:
+                holeInOne()
+            else:
+                displayScore(strokes, par)
+
+            strokes = 0
